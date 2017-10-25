@@ -62,6 +62,8 @@
         stop: function()
         {
             this.engine.stop();
+            // clear up audioContext from vorbis
+            this.engine._ctx.close();
         },
 
         onData: function(event)
